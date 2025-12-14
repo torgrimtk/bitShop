@@ -5,6 +5,8 @@ import './App.css'
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom'
 import LoginPage from './pages/LoginPage'
 import ProductsPage from './pages/ProductsPage'
+import ShoppingCartPage from './pages/ShoppingCartPage'
+import Header from './components/Header/Header'
 
 function App() {
 
@@ -21,9 +23,15 @@ function App() {
         <Link to="/App">App Page</Link>
         <Link to="/LoginPage">Login Page</Link>
         <Link to="/ProductsPage">Products Page</Link>
+        <Link to="/ShoppingCartPage">Shopping Cart Page</Link>
       </nav>
-
+      <Header />
       <Routes>
+
+        <Route
+          path="/ProductsPage"
+          element={<ProductsPage />}
+        />
 
         <Route
           path="/App"
@@ -36,8 +44,8 @@ function App() {
         />
 
         <Route
-          path="/ProductsPage"
-          element={<ProductsPage />}
+          path="/ShoppingCartPage"
+          element={<ShoppingCartPage />}
         />
 
       </Routes>
